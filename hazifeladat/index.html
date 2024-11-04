@@ -1,0 +1,59 @@
+<?php include 'contact.php'; ?>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bemutatkozás</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Üdvözöllek!</h1>
+        <p>Balga Sebastián vagyok, jelenleg a NVSZC Szent-Györgyi Albert Technikumban tanulok a 13.B-s 
+            osztályban, ahol szoftverfejlesztőként és tesztelőként képezem magam. 
+            Szenvedélyesen érdeklődöm a fénytechnika iránt, és célom, hogy szakmámban magas szinten 
+            fejlődjek.
+            Sport terén számos elért eredményem van, amelyekre különösen büszke vagyok. 
+            Pingpongban megyei harmadik helyezést és szlovákiai sikereket értem el, valamint 
+            arany, ezüst és bronz érmeket szereztem atlétikában. Emellett a sporthorgászatban is 
+            jelentős eredményeket értem el, például egy 22 kg-os ponty megfogásával. Munkám során 
+            lehetőségem volt együtt dolgozni neves személyiségekkel, 
+            mint Caramel, Vastag Csaba, Péter Szabó Szilvia, és sok más tehetséges előadóval.</p>
+            
+        <p>Hobbijaim rendkívül fontosak számomra, hiszen mindennapjaimat feldobják és 
+            inspirálnak. Szeretek dobolni, sportolni és horgászni, melyek segítenek 
+            megőrizni a kitartásomat és a kreativitásomat. Hiszem, hogy a kitartás, 
+            őszinteség és segítőkészség azok az értékek, amelyek meghatározzák személyiségemet 
+            és munkámat.
+
+            A jövőben szeretnék elhelyezkedni a szakmámban, különösen a fénytechnika 
+            területén, és folyamatosan fejlődni ezen a területen. 
+            Célom, hogy dobolóként bátran fellépjek nyilvánosság előtt, és horgászként még 
+            nagyobb kihívások elé állítsam magam, hogy még nagyobb halakat fogjak.
+            
+            Fontos számomra az őszinteség, a becsület, a bizalom és a nyugalom, melyeket mind a 
+            személyes, mind a szakmai életemben igyekszem megőrizni és gyakorolni. 
+            Hiszem, hogy ezek az értékek segítenek abban, hogy sikeresen és harmonikusan 
+            fejlődjek tovább.</p>
+        
+        <h2>Lépj velem kapcsolatba!</h2>
+
+        <!-- Kontakt form -->
+        <form method="POST" action="">
+            <label for="name">Név:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="message">Üzenet:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Küldés</button>
+        </form>
+
+        <!-- Visszajelzés megjelenítése -->
+        <?php if (!empty($responseMessage)): ?>
+            <p id="responseMessage"><?php echo $responseMessage; ?></p>
+        <?php endif; ?>
+    </div>
+</body>
+</html>
